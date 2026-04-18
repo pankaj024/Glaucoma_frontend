@@ -46,7 +46,10 @@ export default function Home() {
       });
       
       const data = await response.json();
-      if (data.error) throw new Error(data.error);
+      if (data.error) {
+        console.error("Backend Error Traceback:", data.traceback);
+        throw new Error(data.error);
+      }
       
       setResult(data);
     } catch (err) {
