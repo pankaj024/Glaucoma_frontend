@@ -32,7 +32,7 @@ export default function Home() {
     }
   };
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://glaucoma-backend-2.onrender.com";
 
   const startAnalysis = async () => {
     if (!preview) return;
